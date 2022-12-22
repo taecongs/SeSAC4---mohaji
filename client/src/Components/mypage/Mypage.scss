@@ -1,0 +1,106 @@
+@import '../Commons/Commons.scss';
+@import '~include-media/dist/include-media';
+
+
+
+.tab_section {
+    font-family: "Elice Digital Baeum", sans-serif;
+    display: flex;
+    justify-content: flex-end;
+    top:-120px;
+    // width: 1000px;
+
+    /* 2022-10-30 추가 */
+    width:100%;
+    max-width: 1400px;
+
+    .item_layout {
+        display: flex;
+
+        .nav-item {
+            background-color: rgba(211, 211, 211,0.5);
+            padding: 10px;
+            margin-left: 1px;
+            border-radius: 10px 10px 0 0;
+
+            .nav-link {
+                color:black;
+                // color:white;
+                margin:10px;
+            }
+            .nav-link:active {
+                color:white;
+            }
+        }
+        .nav-item:active {
+            background-color: rgb(255, 182, 227);
+        }
+    }
+}
+
+
+.mypage_entire_layout {
+    font-family: "Elice Digital Baeum", sans-serif;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+    margin-top: -120px;
+
+    /* 2022-10-30 추가 */
+    margin-bottom:140px;
+
+    .mypage_entire_section{
+        // width: 1000px;
+        // height: 700px;
+
+        /* 2022-10-30 추가 */
+        width:100%;
+        max-width: 1400px;
+        height:700px;
+
+        background-color: white;
+        display: flex;
+
+        .userInfo_section {
+            /* 2022-10-30 추가 */
+            width: 20%;
+            background:  rgba(242, 215, 255, 0.2);
+            border-radius: 10px;
+
+            @include media ('<1200px') {
+                display: none;
+            }
+
+            .left_info{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                // justify-content: center;
+                width:100%;
+                min-width: 200px;
+                margin-top:100px;
+
+                .logout_btn {
+                    cursor: pointer;
+                    margin-top: 30px;
+                    width: 80%;
+                    height: 30px;
+                    background-color: $sub_color1;
+                    color:white;
+                    border: 0;
+                    
+                }
+
+                .logout_btn:hover {
+                    background-color: $sub_color1;
+                }
+            }
+        }
+
+        .tabpart {
+            /* 2022-10-30 추가 */
+            width:100%;
+        }
+
+    }
+}

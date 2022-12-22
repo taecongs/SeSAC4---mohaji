@@ -1,0 +1,466 @@
+@import '../components/Commons/Commons.scss';
+@import '~include-media/dist/include-media';
+
+$tablet : 1024px;
+$mobile : 600px;
+
+//지도 + 리스트 전체 구조 
+.totalSection {
+  // width: 100%;
+  // width: 1400px;
+  height: 100vh; 
+  margin: 100px auto 0 auto;
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+
+  @include media ('>1413px') {
+    width: 1400px;
+  }
+
+
+  @include media ('<1413px') {
+    gap:0px;
+  }
+
+  //221024
+  @include media ('<1300px') {
+    flex-direction: column;
+  }
+
+}
+
+// 지도 구조
+.mapSection {
+  width:100%;
+  position:relative;
+
+  @include media ('<1300px') {
+    position: fixed;
+    top:90px;
+  }
+
+}
+
+// 리스트 구조
+.descSection {
+  width:100%; 
+  position:relative;
+  text-align:center;
+
+  @include media ('<1413px') {
+    width:95%;
+  }
+  //221024
+  @include media ('<1300px') {
+    position: fixed;
+    top:45%;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+}
+.listSection {
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+  width: 100%;
+  height: 85vh;
+  
+  @include media ('<1413px') {
+    width:95%;
+  }
+
+
+  @include media('<1300px') {
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    height: 700px;
+    width: 100%;
+    // margin: 0 10%;
+    justify-content: center;
+  }
+
+
+
+}
+
+// 이벤트 리스트 전체 구조
+.list_entire_section {
+  
+  border: 1px solid #aaa;
+  // border-radius: 10px;
+  margin:30px 20px;
+  max-height: 330px;
+
+// box-shadow: -17px -15px 16px -1px rgba(186,186,186,0.91);
+// -webkit-box-shadow: -17px -15px 16px -1px rgba(186,186,186,0.91);
+// -moz-box-shadow: -17px -15px 16px -1px rgba(186,186,186,0.91);
+
+@include media('<1300px') {
+  width: 40%;
+  min-width: 358px;
+  min-height: 270px;
+  max-height: 330px;
+  margin:40px 30px;
+}
+
+@include media('<930px') {
+    width: 70%;
+}
+
+  .list_entire_layout {
+
+    display: flex;
+    width: 100%;
+
+    @include media('<1300px'){
+      position: relative;
+      min-width: 358px;
+      height: 270px;
+      max-height: 330px;
+      overflow: hidden;
+    }
+
+
+    
+
+    
+    .list_desc_layout {
+      position: relative;
+      margin: 30px;
+      width: 95%;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      
+      @include media('<1300px'){
+        margin:20px;
+        max-height:330px;
+      }
+    }
+
+  }
+}
+
+// 이벤트 제목 및 설명 구조
+.list_name_layout {
+
+  .list_name_title {
+    font-family: 'WandohopeR';
+    display: flex;
+    align-items: center;
+    text-align: left;
+    font-size: 18px;
+    font-weight: 700;
+    
+    .title {
+      display: flex;
+
+      @include media('<1300px') {
+        font-size: 15px;
+        font-weight: 700;
+      }
+
+  }
+  }
+  .list_name_detail {
+    font-size: 13px;
+    color:rgb(179, 178, 178);
+    margin-top:10px;
+    margin-bottom:10px;
+    // padding: 10px;
+    // padding-right: 50px;
+    max-height: 70px;
+    text-align: left;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+
+    @include media('<1300px') {
+      max-height: 30px;
+      -webkit-line-clamp: 1;
+      font-size: 12px;
+    }
+  }
+}
+
+.eventInfo {
+  display:flex;
+  align-items:center;
+  // position:absolute;
+  bottom:7%;
+  width:90%;
+  // margin-top: 5%;
+
+  @include media('<1300px') {
+    top:15%;
+  }
+
+  @include media('>760px'){
+    top:15%;
+  }
+
+  
+}
+
+// 이벤트 발생 장소
+.list_place {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  margin-top: 5px;
+  @include media('<1300px') {
+    font-size: 12px;
+  }
+}
+
+//이벤트 발생 기간 및 시간
+.list_period_layout {
+  font-size: 14px;
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  @include media('<1300px') {
+    font-size: 12px;
+  }
+
+      .list_period_start {
+        padding-right: 5px;
+        font-family: 'EliceDigitalBaeum';
+      }
+      .list_period_end {
+        padding-left: 5px;
+        font-family: 'EliceDigitalBaeum';
+      }
+
+}
+.list_time_layout {
+  font-size: 14px;
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  @include media('<1300px') {
+    font-size: 12px;
+  }
+
+  .list_period_time {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    font-family: 'EliceDigitalBaeum';
+  }
+}
+
+.list_review_section {
+  font-size: 14px;
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  @include media('<1300px') {
+    font-size: 12px;
+  }
+
+  .list_review {
+    display: flex;
+    align-items: center;
+    font-family: 'EliceDigitalBaeum';
+    font-weight: 500;
+  }
+}
+
+
+// 이벤트 발생 비용
+.list_price_free {
+  position: absolute;
+  font-size: 14px;
+  background-color: rgb(255, 255, 0);
+  padding: 5px;
+  font-weight: 700;
+  right: 0px;
+
+}
+
+
+//이벤트 이미지 구조
+.list_img_layout {
+  margin:10px;
+  position: relative;
+  width: 50%;
+  height: 100%;
+  max-height:300px;
+  overflow-y: hidden;
+  // border-radius: 0 10px 10px 0;
+
+  @include media ('<1300px') {
+    position: relative;
+    height: 100%;
+    // max-height: 300px;
+  }
+
+  .list_img_type {
+    position: absolute;
+    span{
+      background-color: rgb(162, 79, 99);
+      padding: 5px;
+      font-weight: 700;
+      color:white;
+  }
+}
+  div {
+    .img {
+      position: relative;
+      width: 100%;
+      height: 100%;
+
+      @include media ('<1300px') {
+        // max-height: 220px;
+        height: 100%;
+      }
+
+    }
+  }
+}
+
+// 이벤트 버튼 모음
+
+.Btns {
+  display: flex;
+  align-items: center;
+  // justify-content: center;
+  // position: absolute;
+  width: 100%;
+  margin-top: 20px;
+  // bottom:0;
+
+  @include media ('<1300px') {
+    position: absolute;
+    // bottom: -10%;
+    bottom: 0;
+  }
+
+  
+}
+
+.goMap {
+  background: transparent;
+  border:0;
+  cursor: pointer;
+  padding: 0;
+
+}
+
+
+.goView {
+  width: 35%;
+  border:0;
+  background-color: #6B3767;
+  color:white;
+  height: 30px;
+  // border-radius:10px;
+  cursor: pointer;
+
+}
+.likes {
+  width: 20%;
+  height: 30px;
+  // background-color: rgba(255, 0, 0, 0.5);
+  background-color: transparent;
+  border:0;
+  font-size: 1.5rem;
+  color:rgba(255, 0, 0, 0.5);
+  cursor: pointer;
+  padding: 0;
+
+} 
+
+
+
+// 필터링 date 부분
+.datepicker {
+  div {
+    label {
+      font-size: 12px;
+      font-family: 'EliceDigitalBaeum';
+    }
+    
+    .MuiInputBase-root {
+      height: 41px;
+    }
+  }
+}
+
+// 필터링 섹션 부분
+.searchControllSection {
+  display: flex;
+  justify-content: center;
+  font-family:'EliceDigitalBaeum';
+
+  .searchControll {
+    display: flex;
+    justify-content: center;
+    border: 3px solid #A24F63;
+    width:500px;
+    border-radius: 40px;
+    padding:10px;
+  }
+
+}
+
+.SelectCity {
+  border:0;
+  margin:10px;
+  border-right: 0.5px solid #9999997a;
+  width: 100px;
+
+}
+.SelectCity:hover {
+  color: rgb(162, 79, 99);
+}
+
+.SelectCity option:checked {
+  background:  rgb(162, 79, 99);
+  color: white;
+}
+.SelectCity option:hover {
+  background:  rgb(162, 79, 99);
+  color: white;
+}
+
+
+.SelectType {
+  border:0;
+  margin:10px;
+  border-right: 0.5px solid #9999997a;
+  width: 100px;
+}
+
+.SelectType:hover {
+  color: rgb(162, 79, 99);
+}
+
+.SelectType option:checked {
+  background:  rgb(162, 79, 99);
+  color: white;
+}
+.SelectType option:hover {
+  background:  rgb(162, 79, 99);
+  color: white;
+}
+
+.option:hover {
+  background:  rgb(162, 79, 99);
+  color: white;
+}
+
+.unliked {
+  color: lightgray
+}
