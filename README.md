@@ -1,10 +1,9 @@
 ## 내일 뭐하지?
+📅 &nbsp;기간 : 2022-10-17 ~ 2022-11-02 \
+📚 &nbsp;목적 : 서울 전 지역에서 진행되고 있는 전시회 및 축제 등의 이벤트 일정을 제공하는 서비스입니다.
 
-<code>주제</code>
+<hr/>
 
-⁃ 내일 뭐하지? <br>
-⁃ 전시회, 축제 등의 이벤트 일정 제공 사이트 <br>
-<br>
 <code>기획 의도</code>
 
 ⁃ 당장 내일 어디가지? 뭐하지? 고민할 때 사용할 수 있는 서비스 <br>
@@ -44,3 +43,83 @@
 ⁃ 추가+) 사용자의 관심사에 따른 자동 메일 시스템 <br>
 ⁃ 동행 구하기 -> 채팅 기능 <br>
 ⁃ 길 찾기.. <br>
+
+## 📌폴더구조
+
+```
+📦src
+ ┣ 📂Components
+ ┃ ┣ 📂Banner
+ ┃ ┃ ┣ 📜Banner.js
+ ┃ ┃ ┗ 📜Banner.scss
+ ┃ ┣ 📂ChatInput
+ ┃ ┃ ┗ 📜ChatInput.js
+ ┃ ┣ 📂Commons
+ ┃ ┃ ┗ 📜Commons.scss
+ ┃ ┣ 📂Event
+ ┃ ┃ ┣ 📜Map.js
+ ┃ ┃ ┗ 📜Map.scss
+ ┃ ┣ 📂Footer
+ ┃ ┃ ┣ 📜Footer.js
+ ┃ ┃ ┗ 📜Footer.scss
+ ┃ ┣ 📂Header
+ ┃ ┃ ┣ 📜Header.js
+ ┃ ┃ ┗ 📜Header.scss
+ ┃ ┣ 📂MainGallery
+ ┃ ┃ ┣ 📜Gallery.js
+ ┃ ┃ ┗ 📜Gallery.scss
+ ┃ ┣ 📂MainMyPage
+ ┃ ┃ ┣ 📜Mypage.js
+ ┃ ┃ ┗ 📜Mypage.scss
+ ┃ ┣ 📂Modal
+ ┃ ┃ ┣ 📜Modal.js
+ ┃ ┃ ┗ 📜Modal.scss
+ ┃ ┣ 📂mypage
+ ┃ ┃ ┣ 📜Calendar.js
+ ┃ ┃ ┣ 📜Calendar.scss
+ ┃ ┃ ┣ 📜Favorites.js
+ ┃ ┃ ┣ 📜Favorites.scss
+ ┃ ┃ ┣ 📜MyPage.js
+ ┃ ┃ ┣ 📜Mypage.scss
+ ┃ ┃ ┣ 📜MyPlan.js
+ ┃ ┃ ┣ 📜MyPlan.scss
+ ┃ ┃ ┣ 📜Plan.js
+ ┃ ┃ ┣ 📜Plan.scss
+ ┃ ┃ ┣ 📜Reply.js
+ ┃ ┃ ┗ 📜Reply.scss
+ ┃ ┣ 📂Review
+ ┃ ┃ ┣ 📜Review.js
+ ┃ ┃ ┗ 📜Review.scss
+ ┃ ┣ 📂ReviewForm
+ ┃ ┃ ┣ 📜ReviewForm.js
+ ┃ ┃ ┗ 📜ReviewForm.scss
+ ┃ ┣ 📂Room
+ ┃ ┃ ┗ 📜Room.js
+ ┃ ┣ 📜Button.js
+ ┃ ┗ 📜ScrollToTop.js
+ ┣ 📂Pages
+ ┃ ┣ 📂Chat
+ ┃ ┃ ┣ 📜Chat.js
+ ┃ ┃ ┗ 📜Chat.scss
+ ┃ ┣ 📂Schedule
+ ┃ ┃ ┗ 📜Schedule.js
+ ┃ ┣ 📜Date.json
+ ┃ ┣ 📜Event.js
+ ┃ ┣ 📜Event.scss
+ ┃ ┣ 📜EventDetail.js
+ ┃ ┣ 📜EventDetail.scss
+ ┃ ┣ 📜FindId.js
+ ┃ ┣ 📜FindId.scss
+ ┃ ┣ 📜FindId_Code.js
+ ┃ ┣ 📜KakaoShareButton.js
+ ┃ ┣ 📜Login.js
+ ┃ ┣ 📜Login.scss
+ ┃ ┣ 📜Main.js
+ ┃ ┣ 📜Resetpw.js
+ ┃ ┣ 📜Resetpw.scss
+ ┃ ┣ 📜Signup.js
+ ┃ ┗ 📜Signup.scss
+ ┣ 📂utils
+ ┃ ┗ 📜Router.js
+ ┗ 📜index.js
+```
