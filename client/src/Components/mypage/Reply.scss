@@ -1,0 +1,92 @@
+@import '../Commons/Commons.scss';
+@import '~include-media/dist/include-media';
+
+
+
+
+.replyBox{
+    display:flex;
+    flex-wrap:wrap;
+    margin:1%;
+    justify-content: space-between;
+    gap:10px 10px;
+
+    max-height: 680px;
+    overflow-y: scroll;
+}
+
+.r_Box{
+    width:100%;
+}
+
+
+.replyBox::-webkit-scrollbar{
+    width:12px;
+}
+
+.replyBox::-webkit-scrollbar-thumb{
+    background: linear-gradient(#6B3767, #A24F63);
+    border-radius: 10px;
+    background-clip: padding-box;
+    border: 2px solid transparent;
+}
+
+
+/*=========================================================
+    반복되는 div 정의
+=========================================================*/
+.MainFeedListItem{
+    position: relative;
+    // background:#efefef;
+    padding:20px;
+    height:100%;
+    width:99%;
+    border:1px solid #000;
+}
+
+
+
+/*=========================================================
+    공연 타이틀 정의
+=========================================================*/
+.feed_title{
+    margin-bottom:10px;
+}
+
+
+
+/*=========================================================
+    스코어, 아이디, 작성한 날짜 정의
+=========================================================*/
+.feed_box1{
+    display:flex;
+    gap:0 10px;
+    align-items: center;
+}
+
+.feed_id, .feed_date{
+    font-size:12px;
+    color:#999;
+}
+
+
+
+/*=========================================================
+    컨텐츠 내용 사진 정의
+=========================================================*/
+.feed_box2{
+    displaY:flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 50px;
+}
+
+.feed_content{
+    white-space:wrap;
+    white-space: pre-line;
+    width:85%;
+}
+
+.feed_img{
+    width:10%;
+}

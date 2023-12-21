@@ -1,0 +1,125 @@
+@import '../Commons/Commons.scss';
+@import '~include-media/dist/include-media';
+
+
+.c_entire_layout {
+  font-family: "Elice Digital Baeum", sans-serif;
+  width: 70%;
+  height: 100%;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+
+  .c_header {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    .movetoday {
+      cursor: pointer;
+      position: absolute;
+      right:0;
+      bottom:10px;
+      font-weight: 600;
+      padding: 1px 10px;
+      background-color: rgb(184, 184, 255);
+
+      @include media ('<650px') {
+        display: none;
+      }
+    }
+    
+    button {
+      border:0;
+      border-radius: 5px;
+    }
+
+    .prevNext {
+      cursor: pointer;
+      background: transparent;
+      color:navy;
+      margin:0 20px;
+    }
+
+    .c_title_section {
+      font-size: 16px;
+      margin: 10px;
+
+      @include media('<500px') {
+        margin: 0;
+      }
+
+      .c_title {
+        font-size: 20px;
+        font-weight: 700;
+        margin:0 10px;
+
+        @include media('<500px') {
+          font-size:16px;
+        }
+      }
+    }
+  }
+
+  .c_body {
+    width: 80%;
+    height: 300px;
+  }
+}
+
+.c_week_section {
+  display: flex;
+  font-size:18px;
+  font-weight: 700;
+  margin-top: 20px;
+
+  .weekday {
+    cursor:context-menu;
+    padding: 10px;
+    border-bottom :1px solid rgba(170, 170, 170,0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: $primary_color;
+    color:white;
+  }
+}
+
+.c_entire_layout .c_week_section .weekday {
+  width: calc(100% / 7);
+  text-align: center;
+}
+
+.c_day_section {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  // margin-top: 30px;
+
+  .weekday {
+    cursor:context-menu;
+    border: 1px solid rgba(170, 170, 170,0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 50px;
+  }
+}
+
+.c_entire_layout .c_day_section .weekday {
+  width: calc(100%/ 7);
+  text-align: center;
+}
+
+
+.today {
+  background-color: rgba(184, 184, 255,0.5);
+  
+}
+
+
+.colorChange {
+  background-color: rgba(255, 158, 158,0.5);
+  cursor: pointer;
+}

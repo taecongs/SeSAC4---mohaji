@@ -1,0 +1,178 @@
+@import '../components/Commons/Commons.scss';
+@import '~include-media/dist/include-media';
+
+// * {
+//   font-family: "Elice Digital Baeum", sans-serif;
+// }
+
+.find_id:link, .set_pw:link, .signup:link {
+  text-decoration: none;
+  color:black;
+}
+
+.find_id:hover, .set_pw:hover, .signup:hover {
+  border-bottom: 1px solid #A24F63;
+  margin:-1px;
+}
+
+input:focus {
+  outline: 2px solid #A24F63;
+}
+
+hr {
+  background: rgba(170, 170, 170,0.3);
+  width: 50px;
+  height: 1px;
+  border: 0;
+  margin-top:30px;
+  margin-bottom: 10px;
+}
+
+
+// 로그인 전체 레이아웃
+.login_entire_layout {
+  font-family: "Elice Digital Baeum", sans-serif;
+  min-height: 100vh;
+  // padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .login_section {
+    position: relative;
+    box-sizing: border-box;
+    border: 0.5px solid #f2f4f5;
+    width:500px;
+    height: 600px;
+    padding: 60px 50px;
+    box-shadow: 3px 3px 3px 3px rgba(170, 170, 170,0.5);
+
+    @include media ('<600px') {
+      width:400px;
+      // min-width:400px;
+    }
+  }
+}
+
+// 로그인 form 레이아웃
+.login_form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin:0;
+  padding: 0;
+
+  .login_id, .login_pw{
+    position:relative;
+    width: 250px;
+    height: 48px;
+    padding: 16px;
+    border: 0.5px solid #aaa;
+    margin: 5px 0;
+
+  }
+
+  .login_id:focus, .login_pw:focus {
+
+    color:#A24F63;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .login_btn {
+    position:relative;
+    width: 250px;
+    height: 48px;
+    padding: 16px;
+    border: 0.5px solid #A24F63;
+    background-color: #A24F63;
+    color: white;
+    margin: 5px 0;
+  }
+
+  .login_btn:hover {
+    cursor: pointer;
+  }
+}
+
+.kakaoLogin, .googleLogin {
+  margin:0 5px;
+}
+
+// 아이디 찾기, 비밀번호 재설정 부분
+
+.login_etc {
+  display: flex;
+  flex-direction:row;
+  align-items: center;
+  justify-content: center;
+  margin:20px;
+  border-top: 1px solid rgba(170, 170, 170,0.3);
+  margin-top: 20%;
+
+  .find_id {
+    // margin: 10px;
+    padding:10px;
+    font-size: 12px;
+  }
+
+  .set_pw {
+    // margin: 10px;
+    padding:10px;
+    font-size: 12px;
+  }
+
+  .signup {
+    padding:10px;
+    font-size: 12px;
+  }
+}
+
+
+//////////////////////////////////// 로그인 경고창 부분
+
+.Toastify {
+  // border: 0.2px solid rgb(179, 179, 179);
+  background-color: rgba(255, 127, 80, 0.2);
+  border: 1px solid rgba(255, 127, 80, 0.1);
+  width: 250px;
+  height: 30px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 5px 5px 5px 5px rgba(179,179,179,0.3);
+  // animation: slideIn 0.5s ease-in-out 0s 1 normal forwards;
+}
+
+.Toastify__toast-body {
+  width: '100px';
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 13px;
+  font-weight: bold;
+  color:red;
+}
+
+.Toastify__toast-icon {
+  width: 15px;
+  height: 15px;
+  margin-right: 5px; 
+}
+
+.Toastify__close-button {
+  display: none;
+}
+
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
