@@ -34,6 +34,7 @@
 
 ## 📌폴더구조
 ```
+client
 📦src
  ┣ 📂Components
  ┃ ┣ 📂Banner
@@ -108,5 +109,38 @@
  ┃ ┗ 📜Signup.scss
  ┣ 📂utils
  ┃ ┗ 📜Router.js
+ ┗ 📜index.js
+
+sever
+ 📦src
+ ┣ 📂controller
+ ┃ ┣ 📜EmailController.js
+ ┃ ┣ 📜EventController.js
+ ┃ ┣ 📜ReviewController.js
+ ┃ ┣ 📜ScheduleController.js
+ ┃ ┣ 📜SocketController.js
+ ┃ ┗ 📜UserController.js
+ ┣ 📂middleware
+ ┃ ┗ 📜auth.js
+ ┣ 📂model
+ ┃ ┣ 📜Event.js
+ ┃ ┣ 📜index.js
+ ┃ ┣ 📜Like.js
+ ┃ ┣ 📜Review.js
+ ┃ ┣ 📜ReviewImg.js
+ ┃ ┣ 📜Schedule.js
+ ┃ ┣ 📜Socket.js
+ ┃ ┗ 📜User.js
+ ┣ 📂passport
+ ┃ ┣ 📜GoogleStrategy.js
+ ┃ ┗ 📜kakaoStrategy.js
+ ┣ 📂routes
+ ┃ ┣ 📜auth.js
+ ┃ ┣ 📜email.js
+ ┃ ┣ 📜event.js
+ ┃ ┣ 📜review.js
+ ┃ ┣ 📜schedule.js
+ ┃ ┣ 📜socket.js
+ ┃ ┗ 📜user.js
  ┗ 📜index.js
 ```
